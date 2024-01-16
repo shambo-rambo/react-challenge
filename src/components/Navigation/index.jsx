@@ -1,4 +1,5 @@
-import React from 'react';
+// Navigation component
+
 import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
