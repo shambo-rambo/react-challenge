@@ -5,9 +5,246 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* App.css or another global CSS file */
+
+/* Style for the header */
+.App-header {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  display: flex; /* Use flexbox for inline layout */
+  justify-content: space-between; /* Space between the title and the navigation */
+  align-items: center; /* Align items vertically */
+  padding: 1rem; /* Padding around the header */
+}
+
+/* Style for the header brand (title) */
+.header-brand {
+  color: #fff; /* White text */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.header-brand h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 2rem; /* Adjust font size as needed */
+}
+
+/* Styles for the navigation */
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation list styles */
+.header-nav .navbar-nav {
+  display: flex; /* Display nav items inline */
+  list-style: none; /* Remove list styling */
+  padding-left: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+/* Style for each navigation item */
+.header-nav .nav-item {
+  margin: 0 1rem; /* Space out the nav items */
+}
+
+/* Style for navigation links */
+.header-nav .nav-link {
+  color: #fff; /* White text */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2rem; /* Larger font size */
+  padding: 0.5rem 0; /* Padding for clickable area */
+}
+
+/* Style for active navigation link and hover state */
+.header-nav .nav-link.active,
+.header-nav .nav-link:hover {
+  color: #aaa; /* Gray text for selected or hovered nav links */
+}
+
+/* Style for the navbar toggler */
+.navbar-toggler {
+  border: 1px solid #fff; /* White border for the toggler */
+  background: none; /* Transparent background */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.about {
+  color: #fff; /* White text */
+  background-color: #000; /* Black background */
+  padding: 2rem; /* Add some padding */
+  max-width: 800px; /* Maximum width of the content */
+  margin: 2rem auto; /* Center the content */
+}
+
+.about h3 {
+  font-size: 2rem; /* Larger font size for the heading */
+  margin-bottom: 1rem; /* Space below the heading */
+}
+
+.about p {
+  font-size: 1rem; /* Size of the paragraph text */
+  line-height: 1.6; /* Line spacing for readability */
+  margin-bottom: 1rem; /* Space between paragraphs */
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column; /* Stacks children vertically on smaller screens */
+  padding: 20px;
+  max-width: 1200px; /* Maximum width of the container */
+  margin: 0 auto; /* Centers the container in the viewport */
+  color: #fff; /* White text */
+  background-color: #000; /* Black background */
+}
+
+.about-header {
+  flex-basis: 100%; /* Takes full width */
+  text-align: center; /* Centers the header text */
+}
+
+.about-content {
+  flex-basis: 100%; /* Takes full width */
+  text-align: left; /* Aligns the content text to the left */
+  padding: 20px;
+}
+
+/* Responsive behavior for larger screens */
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row; /* Switches to horizontal layout */
+  }
+
+  .about-header,
+  .about-content {
+    flex: 1; /* Both header and content take equal space */
+    padding
+    : 1rem;
+  }
+
+  .about-header {
+    text-align: center; /* Centers the header text */
+    }
+    
+    .about-content {
+    text-align: left; 
+    padding-left: 2rem; 
+    }
+    }
+    
+    @media (min-width: 1024px) {
+    .about-header h2 {
+    text-align: center;
+    font-size: 2.5rem; 
+    }
+    }
+    
+    h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #fff;
+    }
+    
+    p {
+    font-size: 1rem;
+    line-height: 1.5;
+    }
+
+    /* Footer.css */
+
+.footer {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 1rem;
+  display: flex;
+  justify-content: center; /* Center the logos */
+  align-items: center; /* Align logos vertically */
+}
+
+.footer a {
+  margin: 0 10px; /* Add some space around the links */
+}
+
+.footer img {
+  width: 50px; /* Set a fixed width for your logos */
+  filter: grayscale(100%); /* Makes the logos grey */
+  transition: filter 0.3s ease; /* Smooth transition for hover effect */
+  margin: 0 10px; /* Add some space around the logos */
+}
+
+.footer img:hover {
+  filter: grayscale(0); /* Logos will be in full color on hover */
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.project-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: wheat; /* Semi-transparent grey background */
+  color: #000; /* Black text */
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(1px); /* Blurs the content behind the overlay */
+  padding: 1rem;
+}
+
+.project-title,
+.project-techstack,
+.project-github-link {
+visibility: hidden; /* Hide the text initially */
+opacity: 0;
+transition: visibility 0s, opacity 0.3s ease;
+}
+
+.project-card:hover .project-image {
+filter: blur(2px); /* Blurs the image on hover */
+}
+
+.project-card:hover .project-info {
+opacity: 1; /* Show the overlay content on hover */
+}
+
+.project-card:hover .project-title,
+.project-card:hover .project-techstack,
+.project-card:hover .project-github-link {
+visibility: visible; /* Make text visible on hover */
+opacity: 1;
+}
+
+.project-github-link {
+margin-top: 0.5rem; /* Spacing between text and link */
+}
+
+.project-github-link img {
+width: 44px; /* Size of the GitHub logo */
+}
+

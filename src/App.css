@@ -1,65 +1,65 @@
-.App {
-  text-align: center;
-}
+/* App.css or another global CSS file */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Style for the header */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  display: flex; /* Use flexbox for inline layout */
+  justify-content: space-between; /* Space between the title and the navigation */
+  align-items: center; /* Align items vertically */
+  padding: 1rem; /* Padding around the header */
+}
+
+/* Style for the header brand (title) */
+.header-brand {
+  color: #fff; /* White text */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.header-brand h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 2rem; /* Adjust font size as needed */
+}
+
+/* Styles for the navigation */
+.header-nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Navigation list styles */
+.header-nav .navbar-nav {
+  display: flex; /* Display nav items inline */
+  list-style: none; /* Remove list styling */
+  padding-left: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style for each navigation item */
+.header-nav .nav-item {
+  margin: 0 1rem; /* Space out the nav items */
 }
 
-.project-card {
-  position: relative;
-  overflow: hidden;
+/* Style for navigation links */
+.header-nav .nav-link {
+  color: #fff; /* White text */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2rem; /* Larger font size */
+  padding: 0.5rem 0; /* Padding for clickable area */
 }
 
-.project-card .card-img {
-  transition: transform 0.5s ease;
+/* Style for active navigation link and hover state */
+.header-nav .nav-link.active,
+.header-nav .nav-link:hover {
+  color: #aaa; /* Gray text for selected or hovered nav links */
 }
 
-.project-card:hover .card-img {
-  transform: scale(1.1);
+/* Style for the navbar toggler */
+.navbar-toggler {
+  border: 1px solid #fff; /* White border for the toggler */
+  background: none; /* Transparent background */
 }
 
-.project-overlay {
-  transition: opacity 0.5s ease;
-  opacity: 0;
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-}
-
-.project-card:hover .project-overlay {
-  opacity: 1;
-}
-
-.tech-stack {
-  font-size: 0.85rem;
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
